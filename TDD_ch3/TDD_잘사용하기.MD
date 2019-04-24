@@ -28,6 +28,7 @@
 	 
 
  ***3. 다른 패키지로 분리***
+ 
 ![devicePakage.PNG](https://github.com/src8655/cafe24_6/blob/master/img/devicePakage.PNG?raw=true)
 
  - 장점
@@ -47,6 +48,7 @@
 	 - 환경구성이 이클립스에 의존적이다
 
  ***5. 메이븐 스타일***
+ 
 ![mvn-dir.gif](http://www.egovframe.go.kr/wiki/lib/exe/fetch.php?cache=&w=900&h=435&media=egovframework:dev:dep:build:mvn-dir.gif)
 
  - 장점
@@ -56,6 +58,7 @@
 	 - maven 선행학습이 되어야 한다
 
  ***6. 프로젝트로 분리***
+ 
  ![deviceProject.PNG](https://github.com/src8655/cafe24_6/blob/master/img/deviceProject.PNG?raw=true)
  
 
@@ -119,6 +122,7 @@
 **
 
 > **결함의 종류 참조**
+
 ![ê²°í•¨ì˜ì¢…ë¥˜_ì°¸ê³ .jpg](https://github.com/src8655/cafe24_6/blob/master/%EA%B2%B0%ED%95%A8%EC%9D%98%EC%A2%85%EB%A5%98_%EC%B0%B8%EA%B3%A0.jpg?raw=true)
 **
 
