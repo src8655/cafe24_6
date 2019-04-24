@@ -7,6 +7,7 @@
  
 
  ***1. 같은 클래스에 위치***
+ 
  ![sameClass.PNG](https://github.com/src8655/cafe24_6/blob/master/img/sameClass.PNG?raw=true)
  
 
@@ -17,6 +18,7 @@
 	 - 배포 시 테스트 클래스를 빼줘야 한다
 
  ***2. 하위 패키지에 위치***
+ 
 ![underPackage.PNG](https://github.com/src8655/cafe24_6/blob/master/img/underPackage.PNG?raw=true)
 
  - 장점
