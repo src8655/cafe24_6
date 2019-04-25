@@ -189,28 +189,30 @@ TDD는 테스트 대상(==범위)이 의존하는 것에 대해 **독립적**으
 
    과거 `JMock`, `EasyMock`등의 프레임워크가 인기있었지만 현재는 거의 사용하지 않는다.
 
-   ![img](./img/img6.PNG)
+   
+
+   ![img](./img/img6-1.PNG)
 
    #### - Mock 객체 생성
 
    ```java
-@Test
+   @Test
    public void TestEx2() {
        Person p = mock(Person.class);
        assertTrue(p != null);
    }
-   ```
    
-   ```java
-@Mock
+   @Mock
    Person p;
-   
+
    @Test
    public void TestEx2(){
    	MockitoAnnotations.initMocks(this);
        assertTrue(p != null);
    }
+   
    ```
+   
    
    ### -  when()  :arrow_forward:stub
    
@@ -224,19 +226,19 @@ TDD는 테스트 대상(==범위)이 의존하는 것에 대해 **독립적**으
        assertTrue(20 == p.getAge());
    }
    ```
-   
+
    지정 메소드에 대해 반환해 줄 값을 설정.
+
    
-   
-   
+
    ```java
    public List<String> getList(String name, int age){ 
        // do something code 
    }
    ```
-   
+
    ​													:arrow_double_down:
-   
+
    ```java
    when(mockIns.getList(anyString(), anyInt()))
        .thenReturn(
@@ -245,11 +247,11 @@ TDD는 테스트 대상(==범위)이 의존하는 것에 대해 **독립적**으
            }
        );
    ```
+
    
-   
-   
+
    ### - verify()
-   
+
    ```java
    @Test
    public void TestEx3() {
@@ -265,13 +267,13 @@ TDD는 테스트 대상(==범위)이 의존하는 것에 대해 **독립적**으
        verify(p, timeout(100).atLeast(1)).setName(any(String.class)); // Success
    }
    ```
-   
+
    해당 구문이 호출 됐는지 체크. 횟수나, 타임아웃 시간 까지 지정해서 체크할 수 있다.
-   
+
    :pushpin:생성된 mock는 자신의 모든 행동을 기억하는데, `verify()`를 사용해서 원하는 메소드가 특정 조건으로 실행했는지를 검증할 수 있다.
-   
+
    ### - 클래스 내부에 다른 클래스를 포함하는 경우
-   
+
    ```java
    public class AuthService{
        private AuthDao dao;
@@ -290,9 +292,9 @@ TDD는 테스트 대상(==범위)이 의존하는 것에 대해 **독립적**으
        }
    }
    ```
-   
+
    ​												:arrow_double_down:
-   
+
    ```java
    @Mock
    AuthDao dao;
@@ -308,8 +310,8 @@ TDD는 테스트 대상(==범위)이 의존하는 것에 대해 **독립적**으
        assertTrue(service.isLogin("ETC") == false);
    }
    ```
+
    
-   
-   
+
    ### Mock 객체는 흉내를 내는 객체일 뿐이다. 실제 객체로 작동해 보았을 때 작동하지 않을 수도 있다.
 
