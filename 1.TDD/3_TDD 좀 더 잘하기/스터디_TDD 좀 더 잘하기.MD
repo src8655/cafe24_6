@@ -8,7 +8,7 @@
 
  ***1. 같은 클래스에 위치***
  
- ![sameClass.PNG](https://github.com/src8655/cafe24_6/blob/master/img/sameClass.PNG?raw=true)
+ ![enter image description here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/3_TDD%20%EC%A2%80%20%EB%8D%94%20%EC%9E%98%ED%95%98%EA%B8%B0/img/sameClass.PNG?raw=true)
  
 
  - 장점
