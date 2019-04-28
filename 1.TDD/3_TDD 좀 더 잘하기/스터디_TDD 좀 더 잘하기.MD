@@ -123,8 +123,7 @@
 
 > **결함의 종류 참조**
 
-![ê²°í•¨ì˜ì¢…ë¥˜_ì°¸ê³ .jpg](https://github.com/src8655/cafe24_6/blob/master/%EA%B2%B0%ED%95%A8%EC%9D%98%EC%A2%85%EB%A5%98_%EC%B0%B8%EA%B3%A0.jpg?raw=true)
-**
+ ![enter image description here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/_%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C/1%EC%A3%BC%EC%B0%A8%20%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C.jpg?raw=true)
 
 ## TDD 한계
 
