@@ -19,7 +19,7 @@
 
  ***2. 하위 패키지에 위치***
  
-![underPackage.PNG](https://github.com/src8655/cafe24_6/blob/master/img/underPackage.PNG?raw=true)
+![enter image description here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/3_TDD%20%EC%A2%80%20%EB%8D%94%20%EC%9E%98%ED%95%98%EA%B8%B0/img/underPackage.PNG?raw=true)
 
  - 장점
 	 - 테스트 코드가 가까운 곳에 위치한다
@@ -29,7 +29,7 @@
 
  ***3. 다른 패키지로 분리***
  
-![devicePakage.PNG](https://github.com/src8655/cafe24_6/blob/master/img/devicePakage.PNG?raw=true)
+![enter image description here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/3_TDD%20%EC%A2%80%20%EB%8D%94%20%EC%9E%98%ED%95%98%EA%B8%B0/img/devicePakage.PNG?raw=true)
 
  - 장점
 	 - 테스트 코드를 분리하기 쉽다
@@ -40,7 +40,7 @@
 	
  ***4. 소스 폴더 다르게***
 
-![deviceFolder.PNG](https://github.com/src8655/cafe24_6/blob/master/img/deviceFolder.PNG?raw=true)
+![enter image description here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/3_TDD%20%EC%A2%80%20%EB%8D%94%20%EC%9E%98%ED%95%98%EA%B8%B0/img/deviceFolder.PNG?raw=true)
 
  - 장점
 	 - 배포가 간편하다, 접근제어자와 상관없이 테스트 할 수 있다
@@ -59,7 +59,7 @@
 
  ***6. 프로젝트로 분리***
  
- ![deviceProject.PNG](https://github.com/src8655/cafe24_6/blob/master/img/deviceProject.PNG?raw=true)
+ ![enter image description here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/3_TDD%20%EC%A2%80%20%EB%8D%94%20%EC%9E%98%ED%95%98%EA%B8%B0/img/deviceProject.PNG?raw=true)
  
 
  - 장점
