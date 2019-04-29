@@ -6,7 +6,7 @@
 **TDD와 객체 지향 프로그래밍(OOP)**
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_01.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_01.JPG?raw=true)
 
  - TDD로 작성을 하게 되면 이런 식으로 기능과 객체의 관계를 스스로 먼저 고민하게 되는데getTotalMeasure 메소드는 기능이 Stock 클래스에 의존하고 있음을 알게 된다. 의존관계를 없애기 위해 해당 기능을 Stock 클래스를 테스트하는 것으로 변경해야겠다는 생각을 하게 되고 **낮은 결합도를 가진 모듈화가 강조되는 OOP의 기본 원칙에 충실해진다.**
 
@@ -19,17 +19,17 @@
 라는 요구사항에 대해서
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_02.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_02.JPG?raw=true)
 
  - 위와 같은 테스트 케이스를 작성하고 이를 해결하는 로직을 작성하면 되지만, 업무규칙을 설명해줄 뿐 어느 부분을 어떻게 수정해야 하는지 **디자인 가이드를 개발자에게 명확히 전달해주고 있지 않다.**
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_03.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_03.JPG?raw=true)
 
  - 이 테스트 케이스는 업무규칙을 설명해줄 뿐만 아니라 Account 생성자를 수정해야 한다는 디자인 가이드도 있어 앞의 경우보다 낫다.
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_04.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_04.JPG?raw=true)
 
 
 **8.2TDD 유의사항**
@@ -65,17 +65,17 @@
 > 어떻게 팀원들과 TDD를 할 것인가?
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_05.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_05.JPG?raw=true)
 
 => 가장 취하기 쉬운 방법, 개발에 부담을 주는 위험이 있다.
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_06.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_06.JPG?raw=true)
 
 => 흐지부지해지기 쉽다
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_07.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_07.JPG?raw=true)
 
 => 테스트 커버리지 : 프로그램의 검사나 어떤 종류의 완전성에 관한 지표, 지표가 너무 높으면 좌절하거나 속이려는 시도가 발생하고 너무 낮으면 대충 짠다.
 	
@@ -92,7 +92,7 @@
 **의존성 전파로 인한 연쇄적인 테스트 실패들**
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_08.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_08.JPG?raw=true)
 
  - testAddAcount()가 실패하면 testUpdateAccount()와 testLoadAccount()도 함께 실패하게 되어 있다. 보통 testAddAccount부터 작성해서 테스트 케이스를 성공시킨 다음 진행하기 때문에 작성 당시에는 별 영향이 없었을 것이다. 하지만 나중에 프로그램을 수정 했을 때 테스트 케이스들이 동시에 실패해버리는 경우가 발생한다.
 
@@ -106,16 +106,16 @@
  - BDD는 “비즈니스 로직(고수준의 기능영역)을 테스트하며 개발코드를 완성시키는 방식”
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_09.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_09.JPG?raw=true)
 
 테스트 메소드 작성에 집중할 수 있는 문장적인 템플릿을 제공한다.
 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_20.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_20.JPG?raw=true)
 > 
 > 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_21.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_21.JPG?raw=true)
 > 
 > 
 > ![enter image description
