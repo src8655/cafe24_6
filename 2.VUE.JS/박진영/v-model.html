@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Vue</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="name" placeholder="이름 입력">
+        <br> 입력된 이름 :
+        <h2 v-html="name"></h2>
+    </div>
+    <script>
+        var model = {
+            name: "이름 입력"
+        };
+
+        var app = new Vue({
+            el: '#app',
+            data: model
+        })
+    </script>
+</body>
+
+</html>
