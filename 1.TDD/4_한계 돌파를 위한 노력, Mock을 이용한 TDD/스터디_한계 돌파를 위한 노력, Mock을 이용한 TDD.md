@@ -261,7 +261,7 @@ TDD는 테스트 대상(==범위)이 의존하는 것에 대해 **독립적**으
        
        verify(p, times(1)).setName(any(String.class)); //Success
        verify(p, never()).getName(); //Success
-       verify(p, naver()).setName(eq("HSH")); //Fail
+       verify(p, never()).setName(eq("HSH")); //Fail
        
        //지정된 시간(millis)안으로 1번이상 메소드를 호출 했는가
        verify(p, timeout(100).atLeast(1)).setName(any(String.class)); // Success
