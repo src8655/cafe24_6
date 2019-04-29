@@ -119,4 +119,4 @@
 > 
 > 
 > ![enter image description
-> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img_22.JPG?raw=true)
+> here](https://github.com/src8655/cafe24_6/blob/master/1.TDD/5_TDD에%20대한%20다양한%20시각/img/img_22.JPG?raw=true)
