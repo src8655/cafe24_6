@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hello vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="example">
+        <input type="text" v-model="countryname" placeholder="국가명" />
+        <table border="1">
+            <tbody id="countries">
+                <tr v-for="c in filtered">
+                    <td>{{c.no}}</td>
+                    <td>{{c.name}}</td>
+                    <td>{{c.capital}}</td>
+                    <td>{{c.region}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        var model = {
+            countryname: "",
+            countries: [{
+                "no": 1,
+                "name": "미국",
+                "capital": "워싱턴DC",
+                "region": "america"
+            }, {
+                "no": 2,
+                "name": "나미비아",
+                "capital": "빈트후크",
+                "region": "africa"
+            }, {
+                "no": 3,
+                "name": "대한민국",
+                "capital": "서울",
+                "region": "korea"
+            }]
+        };
+        var vm = new Vue({
+            el: '#example',
+            data: model,
+            computed: {
+                filtered: function() {
+                    var cname = this.countryname.trim();
+                    return this.countries.filter(function(item, index) {
+                        if (item.name.indexOf(cname) > -1) {
+                            return true;
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

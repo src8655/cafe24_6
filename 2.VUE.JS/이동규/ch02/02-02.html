@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>02-02</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+  <div id="simple">
+    <h2 v-html="message"></h2>
+    <h2>{{message2}}</h2>
+  </div>
+  <script type="text/javascript">
+    var model = {
+      message : '<h1>첫번째 Vue.js 앱 입니다!</h1>',
+      message2: "{{변수}} === v.text, v.html이랑은 조금 다름."
+    };
+    var simple = new Vue({
+      el : '#simple',
+      data : model
+    })
+  </script>
+</body>
+</html>

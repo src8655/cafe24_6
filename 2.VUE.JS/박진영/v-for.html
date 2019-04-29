@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Vue</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="enroll">
+        <table>
+            <tbody id="contacts">
+                <tr v-for="(contact,index) in contacts">
+                    <td>{{contact.no}}</td>
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.tel}}</td>
+                    <td>{{contact.addr}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        //vue가 적용된 태그에 입력할 데이터 저장하는 변수
+        var test = {
+            "pageno": 1,
+            "pagesize": 10,
+            "totalcount": 100,
+            "contacts": [{
+                "no": 4,
+                "name": "진영",
+                "tel": "010 - 1234 - 5678",
+                "addr": "서울"
+            }, {
+                "no": 3,
+                "name": "진영",
+                "tel": "010 - 1234 - 5678",
+                "addr": "서울"
+            }, {
+                "no": 2,
+                "name": "진영",
+                "tel": "010 - 1234 - 5678",
+                "addr": "서울"
+            }, {
+                "no": 1,
+                "name": "진영",
+                "tel": "010 - 1234 - 5678",
+                "addr": "서울"
+            }]
+        };
+
+        //vue 적용할 태그 범위 설정 및 데이터 표시
+        var list = new Vue({
+            el: "#enroll",
+            data: test
+        })
+    </script>
+</body>
+
+</html>
