@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hello vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="example">
+        <span v-once>{{message}}</span>
+        <input type="text" v-model="message" />
+    </div>
+    <script type="text/javascript">
+        var model = {
+            message: "Hello World",
+        };
+        var vm = new Vue({
+            el: '#example',
+            data: model
+        });
+    </script>
+</body>
+
+</html>

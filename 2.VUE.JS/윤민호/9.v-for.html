@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hello vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="example">
+        <table border="1">
+            <tbody id="contacts">
+                <tr v-for="(contact, index) in contacts">
+                    <td>{{index}}</td>
+                    <td>{{contact.no}}</td>
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.tel}}</td>
+                    <td>{{contact.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        var model = {
+            "pageno": 1,
+            "pagesize": 10,
+            "totalcount": 100,
+            "contacts": [{
+                "no": 100,
+                "name": "설현1",
+                "tel": "010-1234-5678",
+                "address": "서울1"
+            }, {
+                "no": 101,
+                "name": "설현2",
+                "tel": "010-1234-5678",
+                "address": "서울2"
+            }, {
+                "no": 102,
+                "name": "설현3",
+                "tel": "010-1234-5678",
+                "address": "서울3"
+            }, {
+                "no": 103,
+                "name": "설현4",
+                "tel": "010-1234-5678",
+                "address": "서울4"
+            }, {
+                "no": 104,
+                "name": "설현5",
+                "tel": "010-1234-5678",
+                "address": "서울5"
+            }]
+        };
+        var list = new Vue({
+            el: '#example',
+            data: model
+        });
+    </script>
+</body>
+
+</html>

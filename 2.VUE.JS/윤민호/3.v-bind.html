@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hello vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="simple">
+        <input id="a" type="text" v-bind:value="message" />
+        <br />
+        <image v-bind:src="imagePath" />
+    </div>
+
+    <script type="text/javascript">
+        var model = {
+            message: 'v-bind 디렉티브',
+            imagePath: "https://kr.vuejs.org/images/stdlib.png"
+        };
+
+        var simple = new Vue({
+            el: '#simple',
+            data: model
+        });
+    </script>
+</body>
+
+</html>
