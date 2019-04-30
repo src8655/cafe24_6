@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Vue</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <select v-model="selected">
+            <option disabled value="">선택하세요</option>
+            <option>엄기윤</option>
+            <option>이동규</option>
+            <option>박진영</option>
+            <option>윤민호</option>
+            <option>한성혜</option>
+          </select>
+        <span>선택: {{ selected }}</span>
+        <button v-on:click='change()'>reset</button>
+    </div>
+
+    <script>
+        var model = {
+            selected: '',
+            name: null
+        };
+
+        var app = new Vue({
+            el: '#app',
+            data: model,
+            methods: {
+                change: function() {
+                    this.selected = ''
+                },
+                dbConnect: function() {
+                    // axios({
+                    //     method: 'GET',
+                    //     url: './DB'
+                    // }).then((response) => {
+                    //     console.log(response)
+                    // })
+                    this.name = '엄기윤'
+                }
+            },
+            beforeCreate() {
+                console.log('beforeCreate')
+            },
+            created() {
+                this.dbConnect()
+                console.log('created')
+            },
+            beforeMount() {
+                console.log('beforeMount')
+            },
+            mounted() {
+                this.selected = this.name
+                console.log('mounted')
+            },
+            beforeUpdate() {
+                console.log('beforeUpdate')
+            },
+            updated() {
+                console.log('updated')
+            },
+            beforeDestroy() {
+                console.log('beforeDestroy')
+            },
+            destroyed() {
+                console.log('destroyed')
+            },
+        })
+    </script>
+</body>
+
+</html>
