@@ -49,13 +49,15 @@
             },
             created() {
                 this.dbConnect()
+				this.selected = this.name
+				console.log(this.$el) // 가상돔이 아직 부착 되기 전, undefined 호출
                 console.log('created')
             },
             beforeMount() {
                 console.log('beforeMount')
             },
             mounted() {
-                this.selected = this.name
+				console.log(this.$el) // 가상돔이 실제 돔에 부착됨
                 console.log('mounted')
             },
             beforeUpdate() {
