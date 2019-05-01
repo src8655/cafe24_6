@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/vue"></script>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	new Vue( {
+	    data() {
+	        return {
+	            title : 'Vue.js'
+	        };
+	    },
+	    computed : {
+	        titleComputed(){
+	            return 'After computed : '+this.title;
+	        }
+	    },
+	    created() {
+	        console.log(this.title, this.titleComputed);
+	    }
+	})
+</script>
+</body>
+</html>

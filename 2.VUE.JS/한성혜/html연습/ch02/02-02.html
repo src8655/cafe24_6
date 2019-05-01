@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/vue"></script>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id = "simple" >
+		<h2 v-html = "message"></h2>
+	</div>
+	<script>
+		let model = {
+			message : '첫번째'
+		};
+
+		let simple = new Vue({
+			el : '#simple',
+			data : model
+		})
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/vue"></script>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id = "app">
+		<child-component val= "message"></child-component>
+		<child-component :val= "message"></child-component>
+	</div>
+
+	<script>
+		Vue.component("child-component", {
+			template : '<p>{{ val }} </p>',
+			props : ['val']
+		});
+
+		new Vue({
+			el: "#app",
+			data: {
+				message: 'hello!'
+			}
+		})
+	</script>
+</body>
+</html>
