@@ -104,7 +104,7 @@
 - 보내는 컴포넌트에서는 .$emit()을, 받는 컴포넌트에서는 .$on()
 ![enter image description here](https://github.com/src8655/cafe24_6/blob/master/2.VUE.JS/%EC%9C%A4%EB%AF%BC%ED%98%B8/20190502/img/img02.JPG?raw=true)
 
-
+- 
 
     <!DOCTYPE html>
     <html>
