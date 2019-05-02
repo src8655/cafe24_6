@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>todolistapp</title>
+    <!-- 공용 스타일 시작-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+        * {
+            box-sizing: border-box;
+        }
+        
+        .header {
+            background-image: url(./img/seoul.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 900px;
+            padding: 30px 30px;
+            color: black;
+            font-family: 'Black Han Sans', sans-serif;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        .header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <!-- 공용 스타일 끝-->
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+
+<!--이벤트 버스 객체 시작 = 뷰 선언-->
+<script type="text/javascript">
+    var eventBus = new Vue();
+</script>
+
+<!--이벤트 버스 객체 끝-->
+
+<!-- input-component 시작-->
+<style>
+    .input {
+        background-color: transparent;
+        border: none;
+        width: 75%;
+        height: 35px;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+        cursor: pointer;
+        border-bottom: white 0.3px;
+        border-bottom-style: solid;
+    }
+    
+    .addbutton {
+        padding: 10px;
+        width: 25%;
+        height: 35px;
+        background: white;
+        color: black;
+        float: left;
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .addbutton:hover {
+        color: white;
+        background-color: black;
+    }
+</style>
+
+<!--입력창 템플릿(모듈)-->
+<template id="input-template">
+    <div>
+        <input class="input" type="text" id="task" v-model.trim="todo" placeholder="여기에 할일을 입력하세요." v-on:keyup.enter="addTodo">
+        <span class="addbutton" v-on:click="addTodo" style="letter-spacing: 5px;">추 가</span>
+    </div>    
+</template>
+
+<script type="text/javascript">
+    //input-component 이름을 가진 컴포넌트 정의
+    Vue.component('input-component', {
+        template: '#input-template',
+        data: function() {
+            return {
+                todo: ""
+            }
+        },
+        methods: {
+            addTodo: function() {
+                eventBus.$emit('add-todo', this.todo);
+                this.todo = "";
+            }
+        }
+    })
+</script>
+<!-- input-component 끝-->
+
+<!-- list-component 시작-->
+<style>
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul li {
+        cursor: pointer;
+        position: relative;
+        padding: 8px 8px 8px 40px;
+        background: #eee;
+        font-size: 14px;
+        transition: 0.2s;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    ul li:hover {
+        background: #ddd;
+    }
+    
+    ul li.checked {
+        background: #BBB;
+        color: #fff;
+        text-decoration: line-through;
+    }
+    
+    ul li.checked::before {
+        content: '';
+        position: absolute;
+        border-color: #fff;
+        border-style: none;
+        border-width: 0px 1px 1px 0px;
+        top: 10px;
+        left: 16px;
+        transform: rotate(45deg);
+        height: 8px;
+        width: 8px;
+    }
+    
+    .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 8px 12px 8px 12px
+    }
+    
+    .close:hover {
+        background-color: #f44336;
+        color: white;
+    }
+</style>
+<template id="list-template">
+    <ul id="todolist">
+        <li v-for="(a, index) in todolist" v-bind:class="checked(a.done)"
+            v-on:click="doneToggle(index)">
+            <span>{{ a.todo }}</span>
+            <span v-if="a.done"> (완료)</span>
+            <span class="close" v-on:click.stop="deleteTodo(index)">&#x00D7;</span>
+        </li>
+    </ul>
+</template>
+<script type="text/javascript">
+    Vue.component('list-component', {
+        template: '#list-template',
+        created: function() {
+            eventBus.$on('add-todo', this.addTodo);
+        },
+        //input으로 입력한 할일 데이터가 저장되는 배열
+        data: function() {
+            return {
+                todolist: []
+            }
+        },
+        methods: {
+            checked: function(done) {
+                if (done) return {
+                    checked: true
+                };
+                else return {
+                    checked: false
+                };
+            },
+            addTodo: function(todo) {
+                if (todo !== "") {
+                    this.todolist.push({
+                        todo: todo,
+                        done: false
+                    });
+                }
+            },
+            doneToggle: function(index) {
+                this.todolist[index].done = !this.todolist[index].done;
+            },
+            deleteTodo: function(index) {
+                this.todolist.splice(index, 1);
+            }
+        }
+    })
+</script>
+<!-- list-component 끝-->
+
+<body>
+    <div id="todolistapp">
+        <div id="header" class="header">
+            <h2 style="margin-top: 150px;">할 일을 적어주세요,</h2>
+            <input-component></input-component>
+        </div>
+        <list-component></list-component>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.devtools = true;
+    var vm = new Vue({
+        el: "#todolistapp"
+    })
+</script>
+
+</html>
