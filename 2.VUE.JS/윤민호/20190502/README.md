@@ -50,3 +50,8 @@
 		});
 	</script>
 	</html>
+
+
+## props를 표기할 때 주의 사항
+- 속성명이 camel casing을 사용했다면 속성명을 전달할 태그의 특성명은 kebob casing을 사용해야 함.
+- 만일 특성명에서도 camelCasing을 사용한다면 속성 값이 전달되지 않음.
