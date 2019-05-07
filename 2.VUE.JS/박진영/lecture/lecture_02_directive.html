@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--속성값이 true인 경우에만 해당 태그 표시-->
+        <!--if의 경우 태그조차 처리하지 않음 / show는 태그 처리 후 표기만 회피 -> 대용량의 경우 if가 효율적-->
+        <h1 v-if="visible">i can see</h1>
+        <h1 v-show="visible">i can see</h1>
+    </div>
+
+    <script>
+        var firstApp = new Vue({
+            el: "#app",
+            data: {
+                //true or false
+                visible: true
+            }
+        });
+    </script>
+</body>
+
+</html>

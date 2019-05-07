@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--vue -> html-->
+        <div>{{message}}</div>
+        <!--html -> vue-->
+        <input type="text" v-model="message">
+    </div>
+    <script>
+        var firstApp = new Vue({
+            //현재 인스턴스가 적용될 태그 범위 설정
+            el: "#app",
+            //데이터 객체
+            data: {
+                //{{message}}영역과 바인딩 된 상황(단방향or양방향)
+                message: "첫번째 앱입니다."
+            }
+        });
+    </script>
+</body>
+
+</html>
