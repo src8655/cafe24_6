@@ -4,7 +4,7 @@
 - 웹 서비스의 기반이 되는 시스템 및 구조를 구축하고 운영하는 것을 의미
 
 ### 웹 서비스를 위해 필요한 인프라의 기술 요소와 제품
-![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/윤민호/img/img01.jpg)
+![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img01.JPG?raw=true)
 
 ### 인프라 기술의 계층 구조
 
@@ -23,7 +23,7 @@
 
 - 대표적인 IaaS : 아마존의 웹 서비스(AWS)
 
-![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/윤민호/img/img02.jpg)
+![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img02.JPG?raw=true)
 
 
 #### Platform as a Service(이하PaaS)
@@ -32,7 +32,7 @@
 
 - 대표적인 IaaS : 구글의 Google App Engine
 
-![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/윤민호/img/img03.jpg)
+![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img03.JPG?raw=true)
 
 
 
@@ -45,7 +45,7 @@
 
 > 예) 아파트 기초 공사를 했는데 실제 건축할 것은 야구장이라면 수정하는 것이 어렵다.
 
-![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/윤민호/img/img04.jpg)
+![enter image description here](https://github.com/src8655/cafe24_6/blob/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img04.JPG?raw=true)
 
 
 ### 인프라 설계시의 주의점
