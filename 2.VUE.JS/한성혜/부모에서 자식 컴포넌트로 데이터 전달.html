@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/vue"></script>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+	    <my-component1 v-bind:propsdata="parentData"></my-component1>
+	    <my-component2></my-component2>
+	</div>
+
+	<script>
+		var cmp1 = {
+		    template: '<div>첫 번째 지역 컴포넌트 : {{ cmp1Data }}, 부모 데이터 : {{ propsdata }}</div>',
+		    data: function() {
+		        return {
+		        cmp1Data : 'cmp1'
+		        }
+		    },
+		    props: ['propsdata']
+		};
+		     
+		var cmp2 = {
+		    template: '<div>두 번째 지역 컴포넌트 : {{ cmp2Data }}, 부모 데이터 : {{ parentData }}</div>',
+		    data: function() {
+		        return {
+		        cmp2Data : 'cmp2'
+		        }
+		    }
+		};
+
+		//부모
+		new Vue({
+		    el: '#app',
+		    components: {
+		        'my-component1': cmp1,
+		        'my-component2': cmp2
+		    },
+		    data: {
+		        parentData: 'new Vue()'
+		    }
+		});
+	</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>메모 앱</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!--모바일 웹앱을 쉽게 만들어주는 JS 파일-->
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="app" class="app">
+        <div class="head">메모 앱</div>
+        <div class="body">
+            <div v-if="mode==='list'" class="list">
+                <ul>
+                    <li v-for="m in memos">{{ m.content }}</li>
+                </ul>
+            </div>
+            <div v-else class="write">
+                <textarea v-model="memo.content"></textarea>
+                <button type="button" class="save-btn" v-on:click="save()">저장</button>
+                <button type="button" class="cancel-btn" v-on:click="cancel()">취소</button>
+            </div>
+            <button class="add-btn" type="button" v-on:click="write()" v-if="mode==='list'">+</button>
+        </div>
+        <script src="app.js"></script>
+</body>
+
+</html>

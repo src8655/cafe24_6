@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/vue"></script>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id = "app" >
+		<div class = "box" >
+			<h3> 여기는 부모 범위 </h3>
+			<p> {{ childMessage }} </p>
+			<child-component
+				:parent-message = "parentMessage"
+				@send-message="getChildMessage"></child-component>
+		</div>
+	</div>
+
+	<script>
+		let childComp = Vue.extend({
+			props : { parentMessage : String },
+			template : '<div class = "box" ><h3> 여기는 자식 범위 </h3>' +
+			'<p>{{ parentMessage }}</p></div>',
+
+			data : function(){
+				return {
+					childMessage : '이것은 자식 데이터'
+				}
+			},
+			created : function(){
+				this.$emit('send-message', this.childMessage)
+
+				this.childMessage = '자식이 데이터를 변경했다.'
+			}
+		})
+
+		new Vue({
+			el : '#app',
+			data : {
+				parentMessage : '이것은 부모 데이터이다.',
+				childMessage : ''
+			},
+			components: {
+				'child-component' : childComp
+			},
+			methods : {
+				getChildMessage : function ( text ){
+					this.childMessage = text
+				}
+			}
+		})
+</body>
+</html>

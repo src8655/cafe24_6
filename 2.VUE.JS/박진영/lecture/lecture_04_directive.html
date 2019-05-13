@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="clickEvent">신규 추가</button>
+        <ul>
+            <li v-for="n in numbers">{{n}}</li>
+        </ul>
+        <!--model을 활용해야 태그와 스크립트 영역 모두 반영됨-->
+        <input type="text" v-model="add">
+        <button v-on:click="capture">동물 추가</button>
+        <ul>
+            <li v-for="a in animal">{{a}}</li>
+        </ul>
+        <!--v-if와 v-on을 함께 바인딩하여 활용할 수 있음-->
+        <h3 v-if="visible">i can see</h3>
+        <button v-on:click="visible=!visible">숨김 테스트</button>
+        <!--클릭이벤트 등록-->
+        <button v-on:click="alert('경고')">경고</button>
+        <button v-on:dblclick="alert('경고')">경고</button>
+    </div>
+
+    <script>
+        var firstApp = new Vue({
+            el: "#app",
+            data: {
+                visible: true,
+                numbers: [1, 2, 3, 4, 5],
+                animal: ["lion", "cat", "dog", "turtle"],
+                add: null
+            },
+            methods: {
+                //클릭 시 호출되는 함수
+                clickEvent: function() {
+                    //fun 함수 호출
+                    this.fun();
+                },
+                fun: function() {
+                    //numbers 배열의 마지막 값+1을 다시 배열에 추가
+                    var lastNum = this.numbers[this.numbers.length - 1];
+                    lastNum++;
+                    this.numbers.push(lastNum);
+                },
+                capture: function() {
+                    //동물 추가
+                    this.animal.push(this.add);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
