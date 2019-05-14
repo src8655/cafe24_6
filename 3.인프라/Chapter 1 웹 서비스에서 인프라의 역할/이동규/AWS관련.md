@@ -14,12 +14,12 @@
 	- Amazon EBS는 다른 EC2 인스턴스에만 볼륨을 연결
 	- S3와 EFS보다 빠름
 	- Amazon EBS에는 세 가지 유형의 볼륨이 있음.
-	-- 1. 범용 (SSD) 볼륨 
-	SQL 또는 Oracle 데이터베이스와 같은 많은 읽기 및 쓰기 작업에 적절
-	-- 2. 프로비저닝 된 IOPS (SSD) 볼륨 
-	 볼륨 용량에 관계없이 요청시 읽기 / 쓰기 작업을 구매
-	-- 3. 자기 볼륨(HDD) 
-	 Amazon EC2의 테스트 및 개발 환경에서 사용할 수있는 저렴한 비용의 볼륨 
+	- 1. 범용 (SSD) 볼륨 
+-- SQL 또는 Oracle 데이터베이스와 같은 많은 읽기 및 쓰기 작업에 적절
+	- 2. 프로비저닝 된 IOPS (SSD) 볼륨 
+-- 볼륨 용량에 관계없이 요청시 읽기 / 쓰기 작업을 구매
+	- 3. 자기 볼륨(HDD) 
+-- Amazon EC2의 테스트 및 개발 환경에서 사용할 수있는 저렴한 비용의 볼륨 
 
 4. [Amazon Elastic File System(EFS)EC2를 위한 완전관리형 파일 시스템](https://aws.amazon.com/ko/efs/?nc2=h_m1)
 	
