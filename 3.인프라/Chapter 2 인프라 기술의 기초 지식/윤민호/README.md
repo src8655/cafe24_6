@@ -90,7 +90,7 @@
 - Shared Nothing방식 : 문자 그대로 ‘아무것도 공유하지 않는다’로 모든 자원을 분리
 
 > ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img01.JPG)
-
+https://books.google.co.kr/books?id=LG66DQAAQBAJ&pg=PA112&lpg=PA112&dq=shared+nothing+shared+disk&source=bl&ots=j3D5paQuN0&sig=ACfU3U2bozauIgoCdutgWRf7ji1LcKqveg&hl=ko&sa=X&ved=2ahUKEwi_tZrJ8ZriAhXOyosBHSQ9Bb8Q6AEwA3oECAkQAQ#v=onepage&q=shared%20nothing%20shared%20disk&f=false
 
 ### 암호화와 해시화
 
