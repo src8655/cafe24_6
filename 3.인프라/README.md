@@ -5,7 +5,7 @@
 1. 인프라 설계 시의 주의점 
 ### 　
 ### 19-05-15
-### Chapter 2 인프라 기술의 기초 지식
+### [Chapter 2 인프라 기술의 기초 지식](https://github.com/src8655/cafe24_6/tree/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D)
 1. 인터넷이라는 거대한 네트워크 
 2. 인터넷을 통한 데이터 송수신 구조 
 2. URL을 분석해보자 
