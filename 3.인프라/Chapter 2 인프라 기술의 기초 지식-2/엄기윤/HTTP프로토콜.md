@@ -116,12 +116,6 @@ ex)Content-Security-Policy: default-src 'self'
 **GET, POST(입력), PUT(전체수정), PATCH(부분수정), DELETE 등등**
 
 
-cors? 
-
-
-XMLHttpRequest는 smae origin 정책을 따르기 때문에 같은 도메인에서만 http 요청이 가능
-
-
 
 ex)
 어노테이션
