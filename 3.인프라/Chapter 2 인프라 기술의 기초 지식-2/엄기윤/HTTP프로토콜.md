@@ -12,26 +12,45 @@
 
 ### request  구성
  - 시작줄
+ 
  ex> GET htp://www.zerocho.co HTTP/1.1
  - 헤더
+ 
 	**공통헤더**
+	
 	  Date : 메시지가 만들어진 시간
+	  
 	  Connection : 연결상태
+	  
 	  Cache-Control
+	  
 	  Content-Length : 본문의 크기
+	  
 	  Content-Type: 컨텐츠 타입과(ex:text/html) 문자열
+	  
 	  Content-Language: 사용자 언어
+	  
 	  Content-Encoding: 컨텐츠 압축 방식(ex:gzip,deflate)
+	  
 	**요청헤더**
+	
 	   User-Agent : 어떤 운영체제, 브라우저인지
+	   
 	   **Accept: 원하는 데이터 타입**
+	   
    -   Accept-Charset: utf-8  
+   
    -    Accept-Language: ko, en-US  
+   
     -   Accept-Encoding: br, gzip, deflate
+	
 
 	 Authorization : 인증토큰
+	 
 	 Origin: 어느 주소에서 요청이 시작되었는지
+	 
 	 Referer : 어떤페이지를 경유해서 왔는지
+	 
 
 - 본문
 
@@ -41,18 +60,28 @@
 ### response 구성
 
  - 응답헤더
+ 
 
 	  Access-Control-Allow-Origin : 보내는 주소와 받는 주소사이가 다르면 발생하는 에러(CORS)
+	  
 		 Allow : 자신이 원하는 메소드가 무엇인지 알려줌
+		 
 	 Content-Disposition: 응답본문을 브라우저가 어떻게 표시하는지 알려줌
+	 
 	Content-Security-Policy:  외부파일을 불러오는 경우(자바스크립트,css 같은) 차단할 소스와 불러올 소스를 명시 
+	
 ex)Content-Security-Policy: default-src 'self'
 
 
+
 메서드 ? 
+
 **GET, POST(입력), PUT(전체수정), PATCH(부분수정), DELETE 등등**
+
 cors? 
+
 XMLHttpRequest는 smae origin 정책을 따르기 때문에 같은 도메인에서만 http 요청이 가능
+
 
 ex)
 어노테이션
