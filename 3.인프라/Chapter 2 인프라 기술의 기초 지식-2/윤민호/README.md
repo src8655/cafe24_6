@@ -36,16 +36,6 @@
 > - 다중화한 경우 같은 데이터가 여러 개 존재한다 라는 것 
 > => 다중화의 주의할 점 : 어떤 데이터가 가장 최신이고 올바른 것인지 관리해야 한다.
 
-### Shared Disk방식과 Shared Nothing방식
-
-- Shared Disk방식 : 복수의 컴퓨터가 한 개의 저장소를 사용
-- Shared Nothing방식 : 문자 그대로 ‘아무것도 공유하지 않는다’로 모든 자원을 분리
-- 　　　　　　　　　　　　=> 스토리지 간 통신(리플리케이션)을 하여 데이터 정합성을 확보한다.
-
-> ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img01.JPG)
-
-
-> ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img02.JPG)
 
 ### 동기식과 비동기식 리플리케이션
 - 동기식 : Master와 Slave 가 일관성 있게 최신 데이터를 가지는 것을 보장하는 것
@@ -59,6 +49,18 @@
 	- 장점 : 성능 저하의 정도가 낮다
 	
 	- 단점 : Master가 작동하지 않으면 일괄 복제 주기의 시간만큼 데이터 손실이 발생될 수 있다.
+
+### Shared Disk방식과 Shared Nothing방식
+
+- Shared Disk방식 : 복수의 컴퓨터가 한 개의 저장소를 사용
+- Shared Nothing방식 : 문자 그대로 ‘아무것도 공유하지 않는다’로 모든 자원을 분리
+- 　　　　　　　　　　　　=> 스토리지 간 통신(리플리케이션)을 하여 데이터 정합성을 확보한다.
+
+> ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img01.JPG)
+
+
+> ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img02.JPG)
+
 
 
 ### 암호화와 해시화
