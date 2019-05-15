@@ -69,3 +69,9 @@
 ex)
 
     document.body.removeEventListener('click', funcion);
+	
+	
+	http://bdmp-001.cafe24.com/bizdemo64332/
+
+
+http://bdmp-001.cafe24.com/bizdemo63761/index.php
