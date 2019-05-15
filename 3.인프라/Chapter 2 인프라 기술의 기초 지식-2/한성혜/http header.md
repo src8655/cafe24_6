@@ -2,7 +2,7 @@
 
 ### 네이버의 Response Headers를 공부해보자
 
-![img](./img/img2.png)
+![img](./img/img2.PNG)
 
 - cache control
 
@@ -54,7 +54,7 @@
   - 보안의 중요성에 따라 https 프로토콜만 사용하도록 강제하는 추세이다. --> ex) 구글
   - 클라이언트가 `http`를 요청할 때 `https`를 강제로 redirect하게 전환 하는 것.
 
-  ![img](./img/img3.png)
+  ![img](./img/img3.PNG)
 
   - 클라이언트는 서버로 부터 받은 `https` url을 다시 요청한다.
   - `max-age`는 해당 도메인이 앞으로 https만을 사용할 시간을 초단위로 말한것. 위의 63~ 는 2년을 말한다.
