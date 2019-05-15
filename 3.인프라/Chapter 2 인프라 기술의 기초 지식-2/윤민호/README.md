@@ -47,7 +47,18 @@
 
 > ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img02.JPG)
 
+### 동기식과 비동기식 리플리케이션
+- 동기식 : Master와 Slave 가 일관성 있게 최신 데이터를 가지는 것을 보장하는 것
 
+    - 장점 : Master가 작동하지 않아도 데이터는 Slave에서 계속 사용할 수 있음.
+    
+    - 단점 : Slave가 응답이 없으면 쓰기가 처리되지 않는다. Master는 모든 쓰기를 차단(block)하고, 복제 서버를 다시 사용할 수 있을 때까지 기다려야 한다.
+
+- 비동기식 : 정해진 매 시간마다 일괄 복제한다.
+
+	- 장점 : 성능 저하의 정도가 낮다
+	
+	- 단점 : Master가 작동하지 않으면 일괄 복제 주기의 시간만큼 데이터 손실이 발생될 수 있다.
 
 
 ### 암호화와 해시화
