@@ -15,15 +15,20 @@
 
 **요청라인에서 요청방식의 종류**
 
-**GET** : 요청라인을 통해서 자원요청,
+**GET** : **요청라인을 통해**서 자원요청,
 
     -> 쉽게 엽서라고 생각하면 된다. 엽서는 내용이 다보이기 때문
     또한 4096바이트만 전달이 가능하므로 데이터에 제한이 있다.
 
-**POST** : 메시지 본문을 통해 자원요청
+**POST** : **메시지 본문을 통해** 자원요청
 
     -> 우편봉투라고 생각하면 된다. 어디로 가는지는 알지만 내용은 볼수 없기 때문이다
     또한 POST방식은 데이터에 제한이 없다
+
+   ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img03.JPG)
+
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img04.JPG)
 
 
 ### 성능과 데이터에 관한 기초 지식
