@@ -29,7 +29,7 @@
 
 
 ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img04.JPG)
-
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%202%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EA%B8%B0%EC%88%A0%EC%9D%98%20%EA%B8%B0%EC%B4%88%20%EC%A7%80%EC%8B%9D-2/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img05.JPG)
 
 ### 성능과 데이터에 관한 기초 지식
 
