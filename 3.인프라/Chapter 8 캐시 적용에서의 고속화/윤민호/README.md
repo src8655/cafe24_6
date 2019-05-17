@@ -40,3 +40,16 @@
 - 캐시 키는 기본적으로 URL이지만 응답 vary 헤더에 User-Agent 라고 되어있다면 URL+User-Agent를 캐시키로 한다.
 
 ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6/master/3.%EC%9D%B8%ED%94%84%EB%9D%BC/Chapter%208%20%EC%BA%90%EC%8B%9C%20%EC%A0%81%EC%9A%A9%EC%97%90%EC%84%9C%EC%9D%98%20%EA%B3%A0%EC%86%8D%ED%99%94/%EC%9C%A4%EB%AF%BC%ED%98%B8/img/img03.JPG)
+
+### nginx
+	set $sp 0;
+	if($http_user_agent ~ Android) {
+		set $sp 1;
+	}
+	if($http_user_agent ~ iPhone) {
+		set $sp 1;
+	}
+	if($http_user_agent ~ iPod) {
+		set $sp 1;
+	}
+	
